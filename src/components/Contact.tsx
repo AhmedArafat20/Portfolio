@@ -7,10 +7,6 @@ type Notification = {
   type: "success" | "error";
 };
 
-type EmailJSResult = {
-  text: string;
-};
-
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
   const [notification, setNotification] = useState<Notification | null>(null);
@@ -21,19 +17,28 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_s6q46qj", 
-        "template_u24kc6k", 
-        formRef.current, 
+        "service_s6q46qj",
+        "template_u24kc6k",
+        formRef.current,
         "cd6XzKb4a3kF-2J8k"
       )
       .then(
-        (result: EmailJSResult) => {
-          setNotification({ message: "Message sent successfully!", type: "success" });
+        () => {
+          setNotification({
+            message: "Message sent successfully!",
+            type: "success",
+          });
+
           formRef.current?.reset();
+
           setTimeout(() => setNotification(null), 4000);
         },
-        (error: EmailJSResult) => {
-          setNotification({ message: "Failed to send the message.", type: "error" });
+        () => {
+          setNotification({
+            message: "Failed to send the message.",
+            type: "error",
+          });
+
           setTimeout(() => setNotification(null), 4000);
         }
       );
@@ -68,6 +73,7 @@ export default function Contact() {
           className="p-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition"
           required
         />
+
         <input
           type="email"
           name="user_email"
@@ -75,6 +81,7 @@ export default function Contact() {
           className="p-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition"
           required
         />
+
         <textarea
           name="message"
           placeholder="Your Message"
@@ -82,6 +89,7 @@ export default function Contact() {
           className="p-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition resize-none"
           required
         ></textarea>
+
         <motion.button
           type="submit"
           className="px-6 py-3 bg-gradient-to-r from-blue-400 to-cyan-400 text-gray-900 font-bold rounded-lg hover:scale-105 transition-transform"
