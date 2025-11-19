@@ -6,25 +6,26 @@ export default function Footer() {
       </p>
       <div className="flex justify-center gap-6 mt-2">
         <a
-          href="https://github.com/ahmedayman"
+          href="https://github.com/AhmedArafat20"
           target="_blank"
           className="hover:text-cyan-400 transition-colors"
         >
           GitHub
         </a>
         <a
-          href="https://www.linkedin.com/in/ahmedayman"
+          href="https://www.linkedin.com/in/ahmed-abbas20/"
           target="_blank"
           className="hover:text-cyan-400 transition-colors"
         >
           LinkedIn
         </a>
-        <a
-          href="mailto:ahmed@example.com"
-          className="hover:text-cyan-400 transition-colors"
-        >
-          Email
-        </a>
+<a
+  href="mailto:ahmedarafatt237@gmail.com"
+  className="hover:text-cyan-400 transition-colors"
+>
+  Email
+</a>
+
       </div>
     </footer>
   );

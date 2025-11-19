@@ -18,7 +18,7 @@ export default function Projects() {
       </motion.h2>
 
       <div className="grid md:grid-cols-3 gap-8">
-        {projects.slice(0, 6).map((project: Project) => (
+        {projects.slice(0, 7).map((project: Project) => (
           <motion.div
             key={project.id}
             className="bg-gray-800 rounded-xl p-6 flex flex-col justify-between shadow-lg hover:scale-105 transition-transform cursor-pointer"
