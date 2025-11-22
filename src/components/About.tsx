@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 export default function About() {
@@ -53,7 +52,7 @@ export default function About() {
           <span className="text-blue-400 font-semibold"> analytical</span> and
           <span className="text-blue-400 font-semibold"> problem‑solving</span> skills,
           eager to contribute to the
-          <span className="text-blue-400 font-semibold"> digital transformation</span>{' '}
+          <span className="text-blue-400 font-semibold"> digital transformation</span>
           and technology‑driven growth of the banking sector. Aiming to establish a
           <span className="text-blue-400 font-semibold"> software company</span> that
           addresses
